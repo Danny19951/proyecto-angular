@@ -1,0 +1,144 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "title": "Camiseta Henley Manga 3/4",
+        "description": "Camiseta premium con acabados de calidad. Perfecta para el día a día con estilo casual elegante.",
+        "price": 50000,
+        "image": "imagenes/hombre/producto1.png"
+      },
+      {
+        "id": 2,
+        "title": "Fjällräven Foldsack Backpack",
+        "description": "Mochila resistente perfecta para aventureros urbanos. Diseño ergonómico con múltiples compartimentos.",
+        "price": 80000,
+        "image": "imagenes/hombre/producto2.png"
+      },
+      {
+        "id": 3,
+        "title": "Chaqueta Casual de Algodón",
+        "description": "Chaqueta versátil de algodón para todas las estaciones. Ideal para actividades al aire libre.",
+        "price": 120000,
+        "image": "imagenes/hombre/producto3.png"
+      },
+      {
+        "id": 4,
+        "title": "Camiseta Cuello V Manga Larga",
+        "description": "Prenda ajustada de diseño moderno. Combina comodidad y estilo para cualquier ocasión.",
+        "price": 70000,
+        "image": "imagenes/hombre/producto4.png"
+      },
+      {
+        "id": 5,
+        "title": "Morral Trekking 60L",
+        "description": "Mochila de alta capacidad para aventuras extremas. Sistema de soporte ergonómico y múltiples bolsillos.",
+        "price": 250000,
+        "image": "imagenes/hombre/producto5.png"
+      },
+      {
+        "id": 6,
+        "title": "Anillo Eternidad con Diamantes",
+        "description": "Joya delicada con diamantes engastados en plata. Diseño minimalista perfecto para uso diario.",
+        "price": 350000,
+        "image": "imagenes/joyeria/producto6.png"
+      },
+      {
+        "id": 7,
+        "title": "Aros Acero Oro Rosa",
+        "description": "Aros lisos en acero inoxidable bañado en oro rosa. Elegantes y resistentes para uso diario.",
+        "price": 85000,
+        "image": "imagenes/joyeria/producto7.png"
+      },
+      {
+        "id": 8,
+        "title": "Argollas Plateadas Grandes",
+        "description": "Aretes modernos de acero inoxidable quirúrgico. Diseño clásico y atemporal para personalidades audaces.",
+        "price": 40000,
+        "image": "imagenes/joyeria/producto8.png"
+      },
+      {
+        "id": 9,
+        "title": "Set Anillo de Compromiso",
+        "description": "Anillo clásico de compromiso con diamante central y banda de brillantes. Símbolo perfecto de amor eterno.",
+        "price": 78000,
+        "image": "imagenes/joyeria/producto9.png"
+      },
+      {
+        "id": 10,
+        "title": "Brazalete Dragón en Plata",
+        "description": "Elegante brazalete inspirado en la mitología oriental. Pieza única que combina tradición y lujo.",
+        "price": 150000,
+        "image": "imagenes/joyeria/producto10.png"
+      },
+      {
+        "id": 11,
+        "title": "Laptop Gamer MSI 17\"",
+        "description": "Potente laptop para gaming con pantalla de 17 pulgadas, iluminación RGB y procesador de última generación.",
+        "price": 3500000,
+        "image": "imagenes/electronica/producto11.png"
+      },
+      {
+        "id": 12,
+        "title": "Disco Duro Externo WD Elements 1TB",
+        "description": "Disco duro portátil de alta capacidad. Solución perfecta para backup y almacenamiento móvil.",
+        "price": 105000,
+        "image": "imagenes/electronica/producto12.png"
+      },
+      {
+        "id": 13,
+        "title": "SSD NVMe GUDGA 512GB",
+        "description": "Unidad de estado sólido con tecnología NVMe de alta velocidad. Mejora drásticamente el rendimiento de tu PC.",
+        "price": 450000,
+        "image": "imagenes/electronica/producto13.png"
+      },
+      {
+        "id": 14,
+        "title": "Monitor HP Full HD 24\"",
+        "description": "Monitor Full HD con panel IPS de alta calidad. Colores vibrantes para trabajo y entretenimiento.",
+        "price": 1800000,
+        "image": "imagenes/electronica/producto14.png"
+      },
+      {
+        "id": 15,
+        "title": "Monitor Curvo Samsung Gaming 34\"",
+        "description": "Monitor curvo ultrawide para experiencia gaming inmersiva. Tecnología de última generación con alta tasa de refresco.",
+        "price": 3550000,
+        "image": "imagenes/electronica/producto15.png"
+      },
+      {
+        "id": 16,
+        "title": "Chaqueta 3 en 1 Outdoor Mujer",
+        "description": "Chaqueta de invierno 3 en 1 ultra versátil. Sistema de capas para adaptarse a cualquier clima.",
+        "price": 125000,
+        "image": "imagenes/mujer/producto16.png"
+      },
+      {
+        "id": 17,
+        "title": "Blusa Lunares con Manga Volante",
+        "description": "Blusa elegante con estampado de lunares y mangas con volantes escalonados. Perfecta para looks femeninos y sofisticados.",
+        "price": 85000,
+        "image": "imagenes/mujer/producto17.png"
+      },
+      {
+        "id": 18,
+        "title": "Blusa Básica Corte Elegante",
+        "description": "Blusa básica de corte elegante. Tela suave con excelente caída para un look sofisticado.",
+        "price": 90000,
+        "image": "imagenes/mujer/producto18.png"
+      },
+      {
+        "id": 19,
+        "title": "Chaqueta Deportiva Running",
+        "description": "Chaqueta deportiva con tecnología anti-humedad. Perfecta para entrenamiento y actividades al aire libre.",
+        "price": 380000,
+        "image": "imagenes/mujer/producto19.png"
+      },
+      {
+        "id": 20,
+        "title": "Camiseta Casual Algodón Premium",
+        "description": "Camiseta casual de algodón premium. Diseño moderno para un look relajado y cómodo.",
+        "price": 150000,
+        "image": "imagenes/mujer/producto20.png"
+      }
+    ]
+  }

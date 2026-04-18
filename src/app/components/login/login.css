@@ -1,0 +1,187 @@
+.login-screen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  .login-container {
+    background: white;
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 320px;
+    position: relative;
+    z-index: 2;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+  .login-container h1 {
+    text-align: center;
+    color: #667eea;
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .login-container p {
+    text-align: center;
+    color: #666;
+    margin: 0;
+    margin-bottom: 0.8rem;
+    font-size: 0.85rem; 
+  }
+  
+  .form-group {
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.2rem;   
+    color: #555;    
+    font-weight: 500;
+    max-width: 80%; 
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .form-group input {
+    width: 80%;
+    padding: 0.4rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    max-width: 90%;
+    margin: 0 auto;
+    display: block;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+  }
+  
+  .login-btn {
+    width: 50%;
+    margin: 0.2rem auto;
+    padding: 0.8rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: block; 
+  }
+  
+  .login-btn:hover {
+    opacity: 0.9;
+  }
+  
+  .error-message {
+    background: #fee;
+    color: #c33;
+    padding: 0.7rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .success-message {
+    background: #efe;
+    color: #363;
+    padding: 0.7rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .toggle-form {
+    text-align: center;
+    margin-top: 1rem;
+    color: #666;
+  }
+  
+  .toggle-form a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  /* contenedor base */
+.login-screen {
+  position: relative;
+  overflow: hidden;
+}
+
+/* imágenes flotantes */
+.bg-img {
+  position: absolute;
+  opacity: 0.6;
+  width: 120px;
+  pointer-events: none;
+  animation: flotar 6s ease-in-out infinite;
+
+  filter: brightness(2.5) contrast(1.2) saturate(1.5);
+}
+
+/* posiciones */
+.img1 { top: 60px; left: 40px; }
+.img2 { top: 120px; right: 60px; }
+.img3 { bottom: 80px; left: 100px; }
+.img4 { bottom: 50px; right: 120px; }
+.img5 { top: 60px; left: 40px; }
+.img6 { top: 120px; right: 60px; }
+.img7 { bottom: 80px; left: 100px; }
+.img8 { bottom: 50px; right: 120px; }
+
+/* animación flotante */
+@keyframes flotar {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* aplicar animación a las imágenes */
+.bg-img {
+  position: absolute;
+  opacity: 0.08;
+  width: 120px;
+  pointer-events: none;
+  animation: flotar 6s ease-in-out infinite;
+}
+
+/* opcional: diferentes tiempos para que no se muevan igual */
+.img1 { top: 120px; left: 200px; }
+.img2 { top: 150px; right: 200px; }
+.img3 { bottom: 120px; left: 220px; }
+.img4 { bottom: 100px; right: 220px; }
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #f3f3f3;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 0 10px;
+  width: 60%; 
+  margin: 0 auto;
+}
+
+.input-group input {
+  border: none;
+  background: transparent;
+  padding: 0.7rem;
+  width: 100%;
+  outline: none;
+}
+
+.icon {
+  margin-right: 5px;
+  color: #888;
+}

@@ -1,0 +1,9 @@
+<header class="navbar">
+  <div class="navbar-logo">
+    <img src="/imagenes/logo.png" alt="Logo" style="height: 40px;">
+  </div>
+    <div class="navbar-user">
+      <span>Bienvenido, {{ usuario?.firstName || usuario?.username }}</span>
+      <button (click)="logout()">Cerrar Sesión</button>
+    </div>
+  </header>

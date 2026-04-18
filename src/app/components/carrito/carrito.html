@@ -1,0 +1,47 @@
+<section class="carrito-container">
+  <h2 style="display: flex; align-items: center; gap: 10px;">
+    <img src="/imagenes/logo.png" alt="Logo" style="height: 50px;">
+    Carrito de compras
+  </h2>
+
+  <div *ngIf="items.length === 0" class="carrito-vacio">
+    El carrito está vacío
+  </div>
+
+  <div *ngIf="items.length > 0">
+
+    <!--  SOLO ESTA PARTE TIENE SCROLL -->
+    <div class="carrito-lista">
+      <div class="carrito-item" *ngFor="let item of items">
+        <img [src]="item.image" [alt]="item.title" class="carrito-item-img">
+        <div class="carrito-item-info">
+          <div class="carrito-item-titulo">{{ item.title }}</div>
+          <div class="carrito-item-detalles">
+            <span>Cantidad: {{ item.cantidad }}</span>
+            <span>${{ item.price * item.cantidad | number }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  ESTO SIEMPRE VISIBLE -->
+    <div class="carrito-total">
+      <div class="total-texto">
+        <span>Total:</span>
+        <span class="total-precio">${{ calcularTotal() | number }}</span>
+      </div>
+      <button class="btn-comprar" (click)="comprar()">Comprar Ahora</button>
+      <button class="btn-vaciar" (click)="vaciarCarrito()">Vaciar Carrito</button>
+    </div>
+  </div>  
+</section>
+
+<!-- Modal -->
+<div class="modal-overlay" *ngIf="modalVisible" (click)="cerrarModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <img src="/imagenes/logo.png" alt="Logo" style="height: 80px; margin-bottom: 1rem;">
+    <h3 class="mensaje-exito">¡Compra realizada con éxito!</h3>
+    <p>Su pedido se encuentra en camino. Recibirá un correo de confirmación en breve.</p>
+    <button class="btn-cerrar-modal" (click)="cerrarModal()">Aceptar</button>
+  </div>
+</div>

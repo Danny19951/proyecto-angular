@@ -1,0 +1,8 @@
+.app-contenido {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: linear-gradient(to right, #667eea 0%, #764ba2 100%);
+    min-height: calc(100vh - 64px);
+  }
