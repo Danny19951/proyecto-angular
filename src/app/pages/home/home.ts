@@ -1,10 +1,9 @@
-import { Component } from '@angular/core';
-import { CatalogoComponent } from '../../components/catalogo/catalogo';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  imports: [CatalogoComponent],
   templateUrl: './home.html',
-  styleUrl: './home.css',
+  styleUrls: ['./home.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Home {}
+export class HomeComponent {}

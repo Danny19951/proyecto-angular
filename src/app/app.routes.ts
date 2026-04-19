@@ -1,8 +1,10 @@
 import { Routes } from '@angular/router';
-import { Home } from './pages/home/home';
-import { Registro } from './pages/registro/registro';
+import { HomeComponent } from './pages/home/home';
+import { RegistroComponent } from './pages/registro/registro';
+import { ServicioComponent } from './pages/servicio/servicio'; // Importa el nuevo componente
 
 export const routes: Routes = [
-  { path: '', component: Home },
-  { path: 'registro', component: Registro }
+    { path: '', component: HomeComponent },
+    { path: 'registro', component: RegistroComponent },
+    { path: 'servicio', component: ServicioComponent } // Añade la nueva ruta
 ];

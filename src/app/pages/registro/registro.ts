@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent } from '../../components/navbar/navbar';
+import { NavbarComponent } from '../../shared/navbar/navbar';
 import { FooterComponent } from '../../shared/footer/footer';
 
 @Component({
@@ -10,4 +10,4 @@ import { FooterComponent } from '../../shared/footer/footer';
   templateUrl: './registro.html',
   styleUrl: './registro.css',
 })
-export class Registro {}
+export class RegistroComponent {}
