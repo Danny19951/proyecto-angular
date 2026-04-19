@@ -1,10 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { CatalogoComponent } from '../../components/catalogo/catalogo';
+import { LoginComponent } from '../../components/login/login';
 
 @Component({
   selector: 'app-servicio',
   standalone: true,
-  imports: [CatalogoComponent],
+  imports: [LoginComponent],
   templateUrl: './servicio.html',
   styleUrls: ['./servicio.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -5,16 +5,8 @@
   overflow: hidden;
 }
 
-/* Contenido central */
-main.container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;        /*  elimina cualquier padding */
-  max-width: 100%;   /*  asegura que no haya límite de ancho */
-  width: 100%;       /*  ocupa todo el ancho */
-  background: transparent;
-  overflow: hidden;
-}
-  
+/* 
+  Se ha eliminado la regla duplicada para main.container.
+  Ahora se utiliza la versión global de styles.css,
+  que es la única fuente de verdad.
+*/

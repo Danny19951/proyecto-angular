@@ -1,10 +1,11 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home';
-import { RegistroComponent } from './pages/registro/registro';
-import { ServicioComponent } from './pages/servicio/servicio'; // Importa el nuevo componente
+import { LoginComponent } from './components/login/login';
+import { ServicioComponent } from './pages/servicio/servicio';
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent },
-    { path: 'registro', component: RegistroComponent },
-    { path: 'servicio', component: ServicioComponent } // Añade la nueva ruta
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'servicio', component: ServicioComponent },
 ];

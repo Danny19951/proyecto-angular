@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -10,8 +10,15 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './login.css'
 })
 
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   modoRegistro = false;
+  @Input() iniciarEnRegistro = false;
+
+ngOnInit() {
+  if (this.iniciarEnRegistro) {
+    this.modoRegistro = true;
+  }
+}
   errorMsg = '';
   successMsg = '';
 
