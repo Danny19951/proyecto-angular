@@ -1,3 +1,35 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;  
+}
+
+html {
+  overflow-y: scroll; /* 👈 fuerza que la barra de scroll siempre esté visible */
+  scrollbar-width: none; /* 👈 la oculta en Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* 👈 la oculta en Chrome y Edge */
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+main.container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+}

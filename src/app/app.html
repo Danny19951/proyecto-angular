@@ -1,9 +1,7 @@
-<app-login *ngIf="!sesionActiva"></app-login>
+<app-navbar></app-navbar>
 
-<div *ngIf="sesionActiva">
-  <app-navbar (cerrarSesion)="cerrarSesion()"></app-navbar>
-  <div class="app-contenido">
-    <app-catalogo></app-catalogo>
-    <app-carrito></app-carrito>
-  </div>
-</div>
+<main class="container">
+  <router-outlet></router-outlet>
+</main>
+
+<app-footer></app-footer>

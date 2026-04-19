@@ -1,0 +1,136 @@
+/* IMÁGENES FLOTANTES */
+.floating {
+  position: absolute;
+  width: 125px;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+  animation: flotar 6s ease-in-out infinite;
+}
+
+/* DISTRIBUCIÓN CORRECTA */
+
+/* IZQUIERDA */
+.img1 { top: 8%;     left: 5%; }
+.img2 { top: 30%;    left: 23%; }
+.img5 { bottom: 8%;  left: 5%; }
+.img11 { bottom: 38%;  left: 8%; }
+
+
+/* DERECHA */
+.img4 { top: 5%;     right: 5%; }
+.img3 { top: 15%;    right: 36%; }
+.img6 { bottom: -0.8%;  right: 5%; }
+.img12 { bottom: -5%;  left: 25%; }
+
+/* ZONA MEDIA (sin tapar texto) */
+.img7 { bottom: 70%;  left: 32%; }
+.img8 { bottom: 12%;  left: 50%; }
+.img9  { top: 40%;    right: 12%; }
+.img10 { bottom: 15%; right: 25%; }
+
+/* ANIMACIÓN */
+@keyframes flotar {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+/* CONTENEDOR PRINCIPAL */
+.home-landing {
+  position: relative;
+  width: calc(100vw - 17px);
+  height: calc(100vh - 48px - 124px);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+/* CONTENIDO (ENCIMA DE TODO) */
+.home-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* TEXTO */
+.home-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.home-content p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: rgba(255,255,255,0.9);
+}
+
+/* BOTONES */
+.home-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.home-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  background: white;
+  color: #333;
+  font-weight: 600;
+}
+
+.home-buttons button.secondary {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.home-buttons button:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+/* IMAGEN DEL TÍTULO */
+.hero-inline {
+  width: 120px;
+}
+
+/* TÍTULO */
+.title-with-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+@media (max-width: 768px) {
+  /* Oculta las imágenes del centro para evitar que tapen el texto */
+  .img7, .img8, .img9, .img10 {
+    display: none;
+  }
+
+  /* Reduce el tamaño de las que quedan en los bordes */
+  .floating {
+    width: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* En móvil muy pequeño, oculta también las del centro-borde */
+  .img2, .img3, .img5, .img6 {
+    display: none;
+  }
+
+  /* Solo quedan img1 y img4 en las esquinas */
+  .floating {
+    width: 55px;
+  }
+}

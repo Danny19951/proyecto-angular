@@ -27,7 +27,13 @@ export class CatalogoComponent implements OnInit {
       }
     });
   }
-
+  obtenerCategorias(): string[] {
+    const categorias = this.productos.map(p => p.category);
+    return [...new Set(categorias)];
+  }
+  filtrarPorCategoria(categoria: string): Producto[] {
+    return this.productos.filter(p => p.category === categoria);
+  }
   agregarAlCarrito(producto: Producto) {
     const carrito = JSON.parse(localStorage.getItem('carrito') || '[]');
     const existe = carrito.find((item: any) => item.id === producto.id);

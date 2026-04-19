@@ -1,0 +1,58 @@
+/* CONTENEDOR PRINCIPAL */
+.registro-container {
+    width: 100%;
+  }
+  
+  /* TARJETA */
+  .registro-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+  }
+  
+  /* TÍTULO */
+  .registro-card h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  /* INPUTS */
+  .registro-card input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.9rem;
+  }
+  
+  /* BOTÓN */
+  .registro-card button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .registro-card button:hover {
+    opacity: 0.9;
+  }
+  
+  /* TEXTO INFERIOR */
+  .registro-card p {
+    margin-top: 15px;
+    font-size: 0.85rem;
+  }
+  
+  .registro-card a {
+    color: #667eea;
+    text-decoration: none;
+  }

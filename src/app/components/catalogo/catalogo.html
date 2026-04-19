@@ -1,19 +1,30 @@
 <section class="catalogo">  
-    <h2>Catálogo de Productos</h2>
-  
-    <div *ngIf="cargando" class="cargando">Cargando productos...</div>
-  
-    <div class="productos-grid" *ngIf="!cargando">
-      <div class="producto-card" *ngFor="let producto of productos">
-        <img [src]="producto.image" [alt]="producto.title" class="producto-imagen">
-        <div class="producto-info">
-          <h3 class="producto-titulo">{{ producto.title }}</h3>
-          <p class="producto-descripcion">{{ producto.description }}</p>
-          <div class="producto-footer">
-            <span class="producto-precio">${{ producto.price | number }}</span>
-            <button class="btn-agregar" (click)="agregarAlCarrito(producto)">Agregar</button>
+  <h2>Catálogo de Productos</h2>
+
+  <div *ngIf="cargando" class="cargando">Cargando productos...</div>
+
+  <div *ngIf="!cargando">
+
+    <div *ngFor="let categoria of obtenerCategorias()">
+      <h3>{{ categoria }}</h3>
+
+      <div class="productos-grid">
+        <div class="producto-card" *ngFor="let producto of filtrarPorCategoria(categoria)">
+          <img [src]="producto.image" [alt]="producto.title" class="producto-imagen">
+          
+          <div class="producto-info">
+            <h3 class="producto-titulo">{{ producto.title }}</h3>
+            <p class="producto-descripcion">{{ producto.description }}</p>
+            
+            <div class="producto-footer">
+              <span class="producto-precio">${{ producto.price | number }}</span>
+              <button class="btn-agregar" (click)="agregarAlCarrito(producto)">Agregar</button>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
-  </section>
+
+  </div>
+</section>
