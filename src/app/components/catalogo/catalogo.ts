@@ -1,25 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductoService, Producto } from '../../services/producto';
+import { CarritoService } from '../../services/carrito.service';
+import { CarritoComponent } from '../carrito/carrito';
 
 @Component({
   selector: 'app-catalogo',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, CarritoComponent],
   templateUrl: './catalogo.html',
   styleUrl: './catalogo.css'
 })
 export class CatalogoComponent implements OnInit {
   productos: Producto[] = [];
+  productosFiltrados: Producto[] = [];
+  categoriaActiva: string = 'todos';
   cargando = true;
+  carrito = inject(CarritoService);
 
   constructor(private productoService: ProductoService) {}
 
   ngOnInit() {
     this.productoService.getProductos().subscribe({
       next: (data) => {
-        console.log('DATOS:', data);
         this.productos = data;
+        this.productosFiltrados = data;
         this.cargando = false;
       },
       error: () => {
@@ -27,24 +32,22 @@ export class CatalogoComponent implements OnInit {
       }
     });
   }
-  obtenerCategorias(): string[] {
-    const categorias = this.productos.map(p => p.category);
-    return [...new Set(categorias)];
-  }
-  filtrarPorCategoria(categoria: string): Producto[] {
-    return this.productos.filter(p => p.category === categoria);
-  }
-  agregarAlCarrito(producto: Producto) {
-    const carrito = JSON.parse(localStorage.getItem('carrito') || '[]');
-    const existe = carrito.find((item: any) => item.id === producto.id);
 
-    if (existe) {
-      existe.cantidad++;
+  filtrarCategoria(categoria: string) {
+    this.categoriaActiva = categoria;
+    if (categoria === 'todos') {
+      this.productosFiltrados = this.productos;
     } else {
-      carrito.push({ ...producto, cantidad: 1 });
+      this.productosFiltrados = this.productos.filter(p => p.category === categoria);
     }
+  }
 
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-    window.dispatchEvent(new Event('carritoActualizado'));
+  agregarAlCarrito(producto: Producto) {
+    this.carrito.agregarAlCarrito(producto);
+    this.carrito.abrirCarrito();
+  }
+
+  get totalItems(): number {
+    return this.carrito.items().reduce((total, item) => total + item.cantidad, 0);
   }
 }

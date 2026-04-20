@@ -1,8 +1,10 @@
 footer {
+    grid-row: 3; /* Se posiciona en la tercera fila de nuestro grid */
+    z-index: 10; /* Se asegura de que esté por encima de otros elementos */
     background-color: #222;
     color: white;
     text-align: center;
     padding: 15px;
-    margin-top: 20px;
-    min-height: 50px; /* Altura mínima para el cálculo del layout flex */
+    /* margin-top: 20px; */ /* ¡ELIMINADO! Esta era la causa del scroll */
+    min-height: 50px;
   }

@@ -1,0 +1,103 @@
+.bienvenida-landing {
+    position: relative;
+    width: calc(100vw - 17px);
+    height: calc(100vh - 72.78px - 82.66px - 20px);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .bienvenida-content {
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+  }
+  
+  .bienvenida-content h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .bienvenida-content h1 span {
+    color: white;
+  }
+  
+  .subtitulo {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: rgba(255,255,255,0.9);
+  }
+  
+  .frases {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .frase-card {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    color: white;
+  }
+  
+  .cta {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  
+  .categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  
+  .categorias-grid button {
+    background: rgba(255,255,255,0.15);
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 16px;
+    padding: 1.5rem 1rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .categorias-grid button span {
+    font-size: 2.5rem;
+  }
+  
+  .categorias-grid button p {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .categorias-grid button:hover {
+    background: rgba(255,255,255,0.3);
+    transform: scale(1.05);
+    border-color: white;
+  }
+  
+  @media (max-width: 600px) {
+    .categorias-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .bienvenida-content h1 {
+      font-size: 2rem;
+    }
+  }

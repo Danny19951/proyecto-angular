@@ -12,16 +12,16 @@
       <div class="carrito-items">
         @for (item of carrito.items(); track item.producto.id) {
           <div class="carrito-item">
-            <img [src]="item.producto.imagen" [alt]="item.producto.nombre">
+            <img [src]="item.producto.image" [alt]="item.producto.title" class="carrito-item-img">
             <div class="item-info">
-              <p>{{ item.producto.nombre }}</p>
+              <p>{{ item.producto.title }}</p>
               <div class="item-cantidad">
                 <button (click)="carrito.disminuirCantidad(item.producto.id)">-</button>
                 <span>{{ item.cantidad }}</span>
                 <button (click)="carrito.aumentarCantidad(item.producto.id)">+</button>
               </div>
             </div>
-            <span class="item-precio">${{ item.producto.precio | number }}</span>
+            <span class="item-precio">${{ item.producto.price | number }}</span>
           </div>
         }
       </div>

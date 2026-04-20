@@ -9,12 +9,12 @@ body {
 }
 
 html {
-  overflow-y: scroll; /* 👈 fuerza que la barra de scroll siempre esté visible */
-  scrollbar-width: none; /* 👈 la oculta en Firefox */
+  overflow-y: scroll; /*  fuerza que la barra de scroll siempre esté visible */
+  scrollbar-width: none; /*  la oculta en Firefox */
 }
 
 html::-webkit-scrollbar {
-  display: none; /* 👈 la oculta en Chrome y Edge */
+  display: none; /*  la oculta en Chrome y Edge */
 }
 
 app-root {
@@ -33,3 +33,30 @@ main.container {
   position: relative;
   z-index: 2;
 }
+@keyframes flotar {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.floating {
+  position: absolute;
+  width: 125px;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+  animation: flotar 6s ease-in-out infinite;
+}
+
+.img1 { top: 8%;     left: 5%; }
+.img2 { top: 30%;    left: 23%; }
+.img5 { bottom: 8%;  left: 5%; }
+.img11 { bottom: 38%;  left: 8%; }
+.img4 { top: 5%;     right: 5%; }
+.img3 { top: 15%;    right: 36%; }
+.img6 { bottom: -0.8%;  right: 5%; }
+.img12 { bottom: -5%;  left: 25%; }
+.img7 { bottom: 70%;  left: 32%; }
+.img8 { bottom: 12%;  left: 50%; }
+.img9  { top: 40%;    right: 12%; }
+.img10 { bottom: 15%; right: 25%; }

@@ -1,30 +1,32 @@
-<section class="catalogo">  
-  <h2>Catálogo de Productos</h2>
+<section class="catalogo">
+
+  <div class="catalogo-header">
+    <div class="categorias-btn">
+      <button [class.activo]="categoriaActiva === 'todos'" (click)="filtrarCategoria('todos')">Todos</button>
+      <button [class.activo]="categoriaActiva === 'hombre'" (click)="filtrarCategoria('hombre')">Hombre</button>
+      <button [class.activo]="categoriaActiva === 'mujer'" (click)="filtrarCategoria('mujer')">Mujer</button>
+      <button [class.activo]="categoriaActiva === 'joyeria'" (click)="filtrarCategoria('joyeria')">Joyería</button>
+      <button [class.activo]="categoriaActiva === 'electronica'" (click)="filtrarCategoria('electronica')">Electrónica</button>
+    </div>
+  </div>
 
   <div *ngIf="cargando" class="cargando">Cargando productos...</div>
 
-  <div *ngIf="!cargando">
-
-    <div *ngFor="let categoria of obtenerCategorias()">
-      <h3>{{ categoria }}</h3>
-
-      <div class="productos-grid">
-        <div class="producto-card" *ngFor="let producto of filtrarPorCategoria(categoria)">
-          <img [src]="producto.image" [alt]="producto.title" class="producto-imagen">
-          
-          <div class="producto-info">
-            <h3 class="producto-titulo">{{ producto.title }}</h3>
-            <p class="producto-descripcion">{{ producto.description }}</p>
-            
-            <div class="producto-footer">
-              <span class="producto-precio">${{ producto.price | number }}</span>
-              <button class="btn-agregar" (click)="agregarAlCarrito(producto)">Agregar</button>
-            </div>
+  <div *ngIf="!cargando" class="catalogo-contenido">
+    <div class="productos-grid">
+      <div class="producto-card" *ngFor="let producto of productosFiltrados">
+        <img [src]="producto.image" [alt]="producto.title" class="producto-imagen">
+        <div class="producto-info">
+          <h3 class="producto-titulo">{{ producto.title }}</h3>
+          <p class="producto-descripcion">{{ producto.description }}</p>
+          <div class="producto-footer">
+            <span class="producto-precio">${{ producto.price | number }}</span>
+            <button class="btn-agregar" (click)="agregarAlCarrito(producto)">Agregar</button>
           </div>
         </div>
       </div>
-
     </div>
-
+    <app-carrito></app-carrito>
   </div>
+
 </section>

@@ -1,22 +1,28 @@
-<section class="home-landing">
+<div class="iniciar-sesion-screen">
+  <div class="iniciar-sesion-container">
+    <h1>
+      <img src="/imagenes/logo.png" alt="Logo" style="height: 60px;">
+      QuickShop
+    </h1>
+    <p>Inicia sesión para comenzar a comprar</p>
 
-  <div class="home-content">
-    
-    <div class="home-text">
-      <h1 class="title-with-image">
-          Bienvenido a QuickShop
-          <img src="/imagenes/impacto.png" class="hero-inline">
-        </h1>
-      <p>Descubre productos increíbles al mejor precio. Tecnología, moda y más en un solo lugar.</p>
+    <div class="form-group">
+      <label>Usuario</label>
+      <input type="text" placeholder="Usuario" [(ngModel)]="loginData.username">
+    </div>
 
-      <div class="home-buttons">
-        <button routerLink="/login">Iniciar Sesión</button>
-        <button routerLink="/registro" class="secondary">Registrarse</button>
-      </div>
-    </div>  
-</div>
+    <div class="form-group">
+      <label>Contraseña</label>
+      <input type="password" placeholder="••••••••" [(ngModel)]="loginData.password">
+    </div>
 
-  <!--  Imágenes flotantes -->
+    <button class="iniciar-sesion-btn" (click)="iniciarSesion()">Iniciar Sesión</button>
+
+    <div class="toggle-form">
+      <p>¿No tienes cuenta? <a routerLink="/registro">Regístrate aquí</a></p>
+    </div>
+  </div>
+
   <img src="/imagenes/electronica/producto11.png" class="floating img1">
   <img src="/imagenes/mujer/producto17.png" class="floating img2">
   <img src="/imagenes/joyeria/producto7.png" class="floating img3">
@@ -29,4 +35,4 @@
   <img src="/imagenes/electronica/producto15.png" class="floating img10">
   <img src="/imagenes/mujer/producto18.png" class="floating img11">
   <img src="/imagenes/joyeria/producto10.png" class="floating img12">
-</section>
+</div>

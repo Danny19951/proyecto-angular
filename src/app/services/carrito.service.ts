@@ -12,7 +12,7 @@ export interface CarritoItem {
 export class CarritoService {
   public items = signal<CarritoItem[]>([]);
   public total = computed(() => {
-    return this.items().reduce((total, item) => total + (item.producto.precio * item.cantidad), 0);
+    return this.items().reduce((total, item) => total + (item.producto.price * item.cantidad), 0);
   });
   public visible = signal(false);
 

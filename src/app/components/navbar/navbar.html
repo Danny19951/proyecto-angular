@@ -10,9 +10,11 @@
 
   <!-- CENTRO (solo escritorio) -->
   <nav class="navbar-menu desktop-menu">
-    <a routerLink="/productos" *ngIf="usuario">Productos</a>
-    <a routerLink="/carrito" *ngIf="usuario">Carrito</a>
-  </nav>
+    <a routerLink="/catalogo" (click)="irACatalogo('hombre')" *ngIf="usuario">Hombre</a>
+    <a routerLink="/catalogo" (click)="irACatalogo('mujer')" *ngIf="usuario">Mujer</a>
+    <a routerLink="/catalogo" (click)="irACatalogo('joyeria')" *ngIf="usuario">Joyería</a>
+    <a routerLink="/catalogo" (click)="irACatalogo('electronica')" *ngIf="usuario">Electrónica</a>
+</nav>
 
   <!-- DERECHA -->
   <div class="navbar-right">
@@ -35,7 +37,7 @@
 
     <!-- Usuario escritorio -->
     <div class="navbar-user desktop-menu" *ngIf="usuario">
-      <span>Bienvenido, {{ usuario.firstName || usuario.username }}</span>
+      <span>{{ usuario.genero === 'femenino' ? 'Bienvenida' : 'Bienvenido' }}, {{ usuario.firstName || usuario.username }}</span>
       <button (click)="logout()">Cerrar Sesión</button>
     </div>
 
@@ -52,14 +54,16 @@
   <!-- MENÚ MÓVIL -->
   <div class="mobile-menu" *ngIf="menuAbierto">
 
-    <a routerLink="/productos" *ngIf="usuario">Productos</a>
-    <a routerLink="/carrito" *ngIf="usuario">Carrito</a>
+    <a (click)="irACatalogo('hombre')" *ngIf="usuario">Hombre</a>
+<a (click)="irACatalogo('mujer')" *ngIf="usuario">Mujer</a>
+<a (click)="irACatalogo('joyeria')" *ngIf="usuario">Joyería</a>
+<a (click)="irACatalogo('electronica')" *ngIf="usuario">Electrónica</a>
 
     <a routerLink="/login" *ngIf="!usuario">Iniciar Sesión</a>
     <a routerLink="/registro" *ngIf="!usuario">Registrarse</a>
 
     <div *ngIf="usuario" class="mobile-user">
-      <span>Bienvenido, {{ usuario.firstName || usuario.username }}</span>
+      <span>{{ usuario.genero === 'femenino' ? 'Bienvenida' : 'Bienvenido' }}, {{ usuario.firstName || usuario.username }}</span>
       <button (click)="logout()">Cerrar Sesión</button>
     </div>
 

@@ -14,16 +14,17 @@ export class LoginComponent implements OnInit {
   modoRegistro = false;
   @Input() iniciarEnRegistro = false;
 
-ngOnInit() {
-  if (this.iniciarEnRegistro) {
-    this.modoRegistro = true;
+  ngOnInit() {
+    if (this.iniciarEnRegistro) {
+      this.modoRegistro = true;
+    }
   }
-}
+
   errorMsg = '';
   successMsg = '';
 
   loginData = { username: '', password: '' };
-  registerData = { nombre: '', username: '', email: '', password: '', passwordConfirm: '' };
+  registerData = { nombre: '', username: '', email: '', password: '', passwordConfirm: '', genero: '' };
 
   toggleFormulario() {
     this.modoRegistro = !this.modoRegistro;
@@ -68,7 +69,8 @@ ngOnInit() {
       password: this.registerData.password,
       firstName: this.registerData.nombre.split(' ')[0],
       lastName: this.registerData.nombre.split(' ')[1] || '',
-      email: this.registerData.email
+      email: this.registerData.email,
+      genero: this.registerData.genero
     };
 
     usuarios.push(nuevoUsuario);

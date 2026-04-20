@@ -7,31 +7,61 @@
     </h1>
     <p>Crea tu cuenta para comenzar</p>
 
-    <div class="form-group">
-      <label>Nombre Completo</label>
-      <input type="text" placeholder="Ingresa tu nombre completo" [(ngModel)]="registerData.nombre" required>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Nombre Completo</label>
+        <input type="text" placeholder="Ingresa tu nombre" [(ngModel)]="registerData.nombre" required>
+      </div>
+      <div class="form-group">
+        <label>Correo Electrónico</label>
+        <input type="email" placeholder="ejemplo@correo.com" [(ngModel)]="registerData.email" required>
+      </div>
     </div>
-    <div class="form-group">
-      <label>Usuario</label>
-      <input type="text" placeholder="Usuario" [(ngModel)]="registerData.username" required>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Usuario</label>
+        <input type="text" placeholder="Usuario" [(ngModel)]="registerData.username" required>
+      </div>
+      <div class="form-group">
+        <label>Género</label>
+        <select [(ngModel)]="registerData.genero" required>
+          <option value="">Selecciona tu género</option>
+          <option value="masculino">Masculino</option>
+          <option value="femenino">Femenino</option>
+        </select>
+      </div>      
     </div>
-    <div class="form-group">
-      <label>Correo Electrónico</label>
-      <input type="email" placeholder="ejemplo@correo.com" [(ngModel)]="registerData.email" required>
+
+    <div class="form-row">      
+      <div class="form-group">
+        <label>Contraseña</label>
+        <input type="password" placeholder="••••••••" [(ngModel)]="registerData.password" required>
+      </div>
+      <div class="form-group">
+        <label>Confirmar Contraseña</label>
+        <input type="password" placeholder="••••••••" [(ngModel)]="registerData.passwordConfirm" required>
+      </div>
     </div>
-    <div class="form-group">
-      <label>Contraseña</label>
-      <input type="password" placeholder="••••••••" [(ngModel)]="registerData.password" required>
-    </div>
-    <div class="form-group">
-      <label>Confirmar Contraseña</label>
-      <input type="password" placeholder="••••••••" [(ngModel)]="registerData.passwordConfirm" required>
-    </div>
-    <button class="login-btn">Registrarse</button>
+
+    <button class="login-btn" (click)="registrarUsuario()">Registrarse</button>
 
     <div class="toggle-form">
-      <p>¿Ya tienes cuenta? <a routerLink="/login">Inicia sesión aquí</a></p>
+      <p>¿Ya tienes cuenta? <a routerLink="/iniciar-sesion">Inicia sesión aquí</a></p>
     </div>
   </div>
+
+  <img src="/imagenes/electronica/producto11.png" class="floating img1">
+  <img src="/imagenes/mujer/producto17.png" class="floating img2">
+  <img src="/imagenes/joyeria/producto7.png" class="floating img3">
+  <img src="/imagenes/hombre/producto1.png" class="floating img4">
+  <img src="/imagenes/electronica/producto13.png" class="floating img5">
+  <img src="/imagenes/mujer/producto19.png" class="floating img6">
+  <img src="/imagenes/joyeria/producto9.png" class="floating img7">
+  <img src="/imagenes/hombre/producto4.png" class="floating img8">
+  <img src="/imagenes/hombre/producto2.png" class="floating img9">
+  <img src="/imagenes/electronica/producto15.png" class="floating img10">
+  <img src="/imagenes/mujer/producto18.png" class="floating img11">
+  <img src="/imagenes/joyeria/producto10.png" class="floating img12">
 
 </div>

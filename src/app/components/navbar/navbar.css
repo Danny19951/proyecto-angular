@@ -1,4 +1,6 @@
 .navbar {
+  grid-row: 1; /* Se posiciona en la primera fila de nuestro grid */
+  z-index: 10; /* Se asegura de que esté por encima de otros elementos */
   background: white;
   padding: 0.4rem 1.5rem;
   display: grid;

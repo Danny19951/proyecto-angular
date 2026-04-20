@@ -1,12 +1,31 @@
-:host {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  overflow: hidden;
+/*
+  Estilos para las imágenes flotantes decorativas.
+  Estos se posicionan de forma absoluta en la página.
+*/
+
+.floating {
+  position: absolute;
+  width: 125px;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+  animation: flotar 6s ease-in-out infinite;
 }
 
-/* 
-  Se ha eliminado la regla duplicada para main.container.
-  Ahora se utiliza la versión global de styles.css,
-  que es la única fuente de verdad.
-*/
+@keyframes flotar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Posiciones individuales de cada imagen */
+.img1 { top: 15%; left: 5%; animation-delay: 0s; }
+.img2 { top: 20%; right: 8%; animation-delay: -2s; width: 140px; }
+.img3 { top: 50%; left: 12%; animation-delay: -4s; }
+.img4 { top: 75%; right: 5%; animation-delay: -6s; width: 100px; }
+.img5 { top: 85%; left: 25%; animation-delay: -8s; }
+.img6 { top: 8%; right: 22%; animation-delay: -10s; width: 160px; }
+.img7 { bottom: 10%; left: 2%; animation-delay: -12s; }
+.img8 { top: 40%; right: 18%; animation-delay: -14s; }
+.img9 { bottom: 15%; left: 15%; animation-delay: -1s; }
+.img10 { bottom: 5%; right: 28%; animation-delay: -3s; width: 110px; }
+.img11 { top: 35%; left: 22%; animation-delay: -5s; }
