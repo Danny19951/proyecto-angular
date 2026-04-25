@@ -14,7 +14,7 @@
     <a routerLink="/catalogo" (click)="irACatalogo('mujer')" *ngIf="usuario">Mujer</a>
     <a routerLink="/catalogo" (click)="irACatalogo('joyeria')" *ngIf="usuario">Joyería</a>
     <a routerLink="/catalogo" (click)="irACatalogo('electronica')" *ngIf="usuario">Electrónica</a>
-</nav>
+  </nav>
 
   <!-- DERECHA -->
   <div class="navbar-right">
@@ -37,12 +37,13 @@
 
     <!-- Usuario escritorio -->
     <div class="navbar-user desktop-menu" *ngIf="usuario">
-      <span>{{ usuario.genero === 'femenino' ? 'Bienvenida' : 'Bienvenido' }}, {{ usuario.firstName || usuario.username }}</span>
+      <span>{{ usuario.genero === 'femenino' ? 'Bienvenida' : 'Bienvenido' }}, {{ usuario.firstName || usuario.username
+        }}</span>
       <button (click)="logout()">Cerrar Sesión</button>
     </div>
 
     <div class="navbar-user desktop-menu" *ngIf="!usuario">
-      <a routerLink="/login">Iniciar Sesión</a>
+      <a routerLink="/iniciar-sesion">Iniciar Sesión</a>
       <a routerLink="/registro">Registrarse</a>
     </div>
 
@@ -55,15 +56,18 @@
   <div class="mobile-menu" *ngIf="menuAbierto">
 
     <a (click)="irACatalogo('hombre')" *ngIf="usuario">Hombre</a>
-<a (click)="irACatalogo('mujer')" *ngIf="usuario">Mujer</a>
-<a (click)="irACatalogo('joyeria')" *ngIf="usuario">Joyería</a>
-<a (click)="irACatalogo('electronica')" *ngIf="usuario">Electrónica</a>
+    <a (click)="irACatalogo('mujer')" *ngIf="usuario">Mujer</a>
+    <a (click)="irACatalogo('joyeria')" *ngIf="usuario">Joyería</a>
+    <a (click)="irACatalogo('electronica')" *ngIf="usuario">Electrónica</a>
 
     <a routerLink="/login" *ngIf="!usuario">Iniciar Sesión</a>
     <a routerLink="/registro" *ngIf="!usuario">Registrarse</a>
+    <a routerLink="/login" *ngIf="usuario">Cerrar Sesión</a>
+
 
     <div *ngIf="usuario" class="mobile-user">
-      <span>{{ usuario.genero === 'femenino' ? 'Bienvenida' : 'Bienvenido' }}, {{ usuario.firstName || usuario.username }}</span>
+      <span>{{ usuario.genero === 'femenino' ? 'Bienvenida' : 'Bienvenido' }}, {{ usuario.firstName || usuario.username
+        }}</span>
       <button (click)="logout()">Cerrar Sesión</button>
     </div>
 
