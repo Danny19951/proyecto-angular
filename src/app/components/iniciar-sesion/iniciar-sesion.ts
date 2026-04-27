@@ -20,9 +20,6 @@ export class IniciarSesionComponent {
 
   iniciarSesion() {
 
-    var elementobotones = document.getElementsByClassName("navbar-user desktop-menu");
-    if (elementobotones != null) { elementobotones[0].innerHTML = '<a routerLink="/iniciar-sesion">Iniciar Sesión</a>'; }
-
     const usuarios = JSON.parse(localStorage.getItem('usuarios') || '[]');
     const usuario = usuarios.find((u: any) =>
       u.username === this.loginData.username && u.password === this.loginData.password

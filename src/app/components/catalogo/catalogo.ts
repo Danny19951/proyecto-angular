@@ -9,14 +9,18 @@ import { CarritoComponent } from '../carrito/carrito';
   standalone: true,
   imports: [CommonModule, CarritoComponent],
   templateUrl: './catalogo.html',
+ 
   styleUrl: './catalogo.css'
 })
+
 export class CatalogoComponent implements OnInit {
   productos: Producto[] = [];
   productosFiltrados: Producto[] = [];
   categoriaActiva: string = 'todos';
   cargando = true;
   carrito = inject(CarritoService);
+
+
 
   constructor(private productoService: ProductoService) {}
 
@@ -31,6 +35,15 @@ export class CatalogoComponent implements OnInit {
         this.cargando = false;
       }
     });
+  }
+
+   ngAfterViewInit() {
+    const elementobotones = document.getElementsByClassName("navbar-user desktop-menu");
+
+    if (elementobotones.length > 0) {
+      elementobotones[0].innerHTML =
+        '<div class="navbar-user desktop-menu" *ngIf="!usuario"><a href="/iniciar-sesion">Cerrar Sesión</a>';
+    }
   }
 
   filtrarCategoria(categoria: string) {
